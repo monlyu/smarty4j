@@ -1,27 +1,20 @@
 package com.ruixus.smarty4j;
 
-import static org.objectweb.asm.Opcodes.*;
+import com.ruixus.smarty4j.statement.Document;
+import com.ruixus.smarty4j.util.DynamicClassLoader;
+import com.ruixus.smarty4j.util.SimpleStack;
+import com.ruixus.smarty4j.util.SimpleStringReader;
+import org.objectweb.asm.ClassWriter;
+import org.objectweb.asm.MethodVisitor;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.Reader;
-import java.io.Writer;
+import java.io.*;
 import java.nio.channels.WritableByteChannel;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.objectweb.asm.ClassWriter;
-import org.objectweb.asm.MethodVisitor;
-
-import com.ruixus.smarty4j.statement.Document;
-import com.ruixus.smarty4j.util.DynamicClassLoader;
-import com.ruixus.smarty4j.util.SimpleStack;
-import com.ruixus.smarty4j.util.SimpleStringReader;
+import static org.objectweb.asm.Opcodes.*;
 
 /**
  * The template class save the information of template file, and built-in template parser that
